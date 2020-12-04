@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BlazorTest/.vs
+/BlazorTest/BlazorTest/bin
+/BlazorTest/BlazorTest/obj
+/BlazorTest/BlazorTest/wwwroot/debug.log
