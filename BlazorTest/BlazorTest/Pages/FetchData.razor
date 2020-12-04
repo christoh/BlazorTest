@@ -44,8 +44,8 @@ else
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
 
-    private void OnButtonClicked()
+    private async void OnButtonClicked(MouseEventArgs e)
     {
-        forecasts[0].TemperatureC++;
+        await Task.Run(() => forecasts[0].TemperatureC++);
     }
 }
