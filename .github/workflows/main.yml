@@ -27,6 +27,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.5.1
       with:
         target_branch: gh-pages
-        build_dir: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
+        build_dir: BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
