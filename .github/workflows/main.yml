@@ -16,11 +16,11 @@ jobs:
     - name: Publish app
       run: dotnet publish BlazorTest -c Release
 
-    - name: Rewrite base href
-      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
-      with:
-        html_path: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
-        base_href: /BlazorTest/
+#    - name: Rewrite base href
+#      uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
+#      with:
+#        html_path: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
+#        base_href: /BlazorTest/
 
     - name: GitHub Pages
       if: success()
