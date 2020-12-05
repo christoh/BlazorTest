@@ -37,15 +37,15 @@ else
 <p><button class="btn btn-primary" @onclick="OnButtonClicked">Test</button></p>
 
 @code {
-    private WeatherForecast[] forecasts;
+    private IEnumerable<WeatherForecast> forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        forecasts = await Http.GetFromJsonAsync<IEnumerable<WeatherForecast>>("sample-data/weather.json");
     }
 
     private async void OnButtonClicked(MouseEventArgs e)
     {
-        await Task.Run(() => forecasts[0].TemperatureC++);
+        await Task.Run(() => forecasts.First().TemperatureC++);
     }
 }
