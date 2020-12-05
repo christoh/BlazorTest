@@ -1,6 +1,6 @@
 name: DeployToGitHubPages
 env:
-  PUBLISH_DIR: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot
+  PUBLISH_DIR: bin/Release/netstandard2.1/publish/wwwroot
 
 # Controls when the action will run
 on:
@@ -19,7 +19,7 @@ jobs:
     - name: Rewrite base href
       uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
       with:
-        html_path: ${{ env.PUBLISH_DIR }}/index.html
+        html_path: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
         base_href: /BlazorTest/
 
     - name: GitHub Pages
@@ -27,6 +27,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1.5.1
       with:
         target_branch: gh-pages
-        build_dir: bin/Release/netstandard2.1/publish/wwwroot
+        build_dir: /home/runner/work/BlazorTest/BlazorTest/BlazorTest/BlazorTest/bin/Release/netstandard2.1/publish/wwwroot/index.html
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
